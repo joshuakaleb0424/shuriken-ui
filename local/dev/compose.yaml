@@ -12,15 +12,14 @@ services:
     environment:
       NUXT_HOST: 0.0.0.0
       NUXT_PORT: "3000"
-      NUXT_PUBLIC_API_BASE_URL: "${NUXT_PUBLIC_API_BASE_URL:-https://scac-backend.localhost}"
     expose:
       - "3000"
-    healthcheck:
-      test: ["CMD", "wget", "--quiet", "--spider", "http://127.0.0.1:3000/health"]
-      interval: 10s
-      timeout: 3s
-      retries: 5
-      start_period: 30s
+    # healthcheck:
+    #   test: ["CMD", "wget", "--quiet", "--spider", "http://127.0.0.1:3000/health"]
+    #   interval: 10s
+    #   timeout: 3s
+    #   retries: 5
+    #   start_period: 30s
     labels:
       caddy: "${SHURIKENUI_FRONTEND_HOST:-shuriken-ui.localhost}"
       caddy.reverse_proxy: "{{upstreams 3000}}"
