@@ -8,8 +8,8 @@
     "serve": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxt/fonts": "^0.11.4",
     "@joshuakaleb/nuxt": "workspace:*",
+    "@nuxt/fonts": "^1.2.0",
     "@tailwindcss/typography": "^0.5.20",
     "nuxt": "catalog:",
     "tailwindcss": "catalog:",
