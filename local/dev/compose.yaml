@@ -10,6 +10,7 @@ services:
       - -c
       - pnpm install --frozen-lockfile && pnpm dev --host 0.0.0.0 --port 3000
     environment:
+      NPM_TOKEN: "${NPM_TOKEN:-}"
       NUXT_HOST: 0.0.0.0
       NUXT_PORT: "3000"
     expose:
