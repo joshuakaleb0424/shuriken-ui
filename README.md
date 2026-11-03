@@ -4,7 +4,7 @@ This is a monorepo for Shuriken UI, a collection of components for building mode
 
 ## Packages
 
-- [@joshuakaleb/nuxt](./packages/nuxt/README.md): Nuxt Module for Shuriken UI.
+- [@joshuakaleb/shuriken-ui-nuxt](./packages/nuxt/README.md): Nuxt Module for Shuriken UI.
 
 ## Development
 
@@ -17,7 +17,7 @@ pnpm install
 ### Prepare the development environment
 
 ```bash
-pnpm --filter @joshuakaleb/nuxt dev:prepare
+pnpm --filter @joshuakaleb/shuriken-ui-nuxt dev:prepare
 ```
 
 ### Run a playground
@@ -26,4 +26,4 @@ pnpm --filter @joshuakaleb/nuxt dev:prepare
 pnpm --filter playground dev
 ```
 
-Available playgrounds: `playground`, `playground-tiny`, `@joshuakaleb/docs`.
+Available playgrounds: `playground`, `playground-tiny`, `@joshuakaleb/shuriken-ui-docs`.

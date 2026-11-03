@@ -4,8 +4,8 @@ useHead(() => ({
   title: route.meta.title,
   titleTemplate: (titleChunk) => {
     return titleChunk
-      ? `${titleChunk} - @joshuakaleb/nuxt`
-      : '@joshuakaleb/nuxt'
+      ? `${titleChunk} - @joshuakaleb/shuriken-ui-nuxt`
+      : '@joshuakaleb/shuriken-ui-nuxt'
   },
   bodyAttrs: {
     class: 'bg-white dark:bg-muted-950',

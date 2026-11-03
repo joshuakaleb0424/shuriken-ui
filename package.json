@@ -1,11 +1,11 @@
 {
-  "name": "@joshuakaleb/monorepo",
+  "name": "@joshuakaleb/shuriken-ui-monorepo",
   "type": "module",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.12.4",
   "scripts": {
-    "dev": "pnpm --filter @joshuakaleb/docs dev",
-    "dev:prepare": "pnpm --filter @joshuakaleb/nuxt dev:prepare"
+    "dev": "pnpm --filter @joshuakaleb/shuriken-ui-docs dev",
+    "dev:prepare": "pnpm --filter @joshuakaleb/shuriken-ui-nuxt dev:prepare"
   }
 }

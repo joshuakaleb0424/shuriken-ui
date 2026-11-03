@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   modules: [
-    '@joshuakaleb/nuxt',
+    '@joshuakaleb/shuriken-ui-nuxt',
     '@nuxt/fonts',
   ],
   css: ['~/assets/css/main.css'],

@@ -103,10 +103,10 @@ importers:
       '@iconify-json/vscode-icons':
         specifier: ^1.2.95
         version: 1.2.95
-      '@joshuakaleb/nuxt':
+      '@joshuakaleb/shuriken-ui-nuxt':
         specifier: workspace:*
         version: link:../packages/nuxt
-      '@joshuakaleb/nuxt-component-meta':
+      '@joshuakaleb/shuriken-ui-nuxt-component-meta':
         specifier: workspace:*
         version: link:../packages/nuxt-component-meta
       '@nuxt/content':
@@ -248,7 +248,7 @@ importers:
 
   packages/nuxt-component-meta:
     devDependencies:
-      '@joshuakaleb/nuxt':
+      '@joshuakaleb/shuriken-ui-nuxt':
         specifier: workspace:*
         version: link:../nuxt
       '@nuxt/kit':
@@ -278,7 +278,7 @@ importers:
 
   playgrounds/default:
     devDependencies:
-      '@joshuakaleb/nuxt':
+      '@joshuakaleb/shuriken-ui-nuxt':
         specifier: workspace:*
         version: link:../../packages/nuxt
       '@nuxt/fonts':
@@ -302,7 +302,7 @@ importers:
 
   playgrounds/tiny:
     devDependencies:
-      '@joshuakaleb/nuxt':
+      '@joshuakaleb/shuriken-ui-nuxt':
         specifier: workspace:*
         version: link:../../packages/nuxt
       '@nuxt/fonts':

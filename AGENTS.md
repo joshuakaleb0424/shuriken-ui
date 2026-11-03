@@ -46,12 +46,12 @@
 ### Validation after dependency changes
 
 ```sh
-./local/pnpm --filter @joshuakaleb/nuxt lint
-./local/pnpm --filter @joshuakaleb/nuxt test:types
-./local/pnpm --filter @joshuakaleb/nuxt build
+./local/pnpm --filter @joshuakaleb/shuriken-ui-nuxt lint
+./local/pnpm --filter @joshuakaleb/shuriken-ui-nuxt test:types
+./local/pnpm --filter @joshuakaleb/shuriken-ui-nuxt build
 
-./local/pnpm --filter @joshuakaleb/docs lint
-./local/pnpm --filter @joshuakaleb/docs build
+./local/pnpm --filter @joshuakaleb/shuriken-ui-docs lint
+./local/pnpm --filter @joshuakaleb/shuriken-ui-docs build
 
 ./local/pnpm --filter playground build
 ./local/pnpm --filter playground-tiny build

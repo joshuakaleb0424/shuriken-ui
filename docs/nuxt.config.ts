@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   // ssr: false,
   modules: [
     'reka-ui/nuxt',
-    '@joshuakaleb/nuxt',
+    '@joshuakaleb/shuriken-ui-nuxt',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/fonts',
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-04-01',
   componentMeta: {
-    metaSources: ['@joshuakaleb/nuxt-component-meta'],
+    metaSources: ['@joshuakaleb/shuriken-ui-nuxt-component-meta'],
     exclude: [
       // Disable parsing components in the project, only use static ones.
       () => true,
