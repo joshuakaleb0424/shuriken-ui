@@ -21,7 +21,7 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.4.1",
+    "@antfu/eslint-config": "^10.0.0",
     "@iconify-json/akar-icons": "^1.2.7",
     "@iconify-json/cib": "^1.2.3",
     "@iconify-json/devicon": "^1.2.76",
@@ -56,7 +56,7 @@
     "@vueuse/nuxt": "^13.9.0",
     "apexcharts": "5.3.3",
     "better-sqlite3": "^12.11.1",
-    "eslint": "^9.39.5",
+    "eslint": "^10.14.0",
     "minisearch": "^7.2.0",
     "nuxt": "catalog:",
     "nuxt-component-meta": "^0.13.1",

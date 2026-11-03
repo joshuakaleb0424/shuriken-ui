@@ -13,6 +13,7 @@ services:
       NPM_TOKEN: "${NPM_TOKEN:-}"
       NUXT_HOST: 0.0.0.0
       NUXT_PORT: "3000"
+      PYTHON: /usr/bin/python3
     expose:
       - "3000"
     # healthcheck:

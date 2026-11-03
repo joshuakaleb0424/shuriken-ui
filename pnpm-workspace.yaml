@@ -5,12 +5,24 @@ packages:
   - playgrounds/*
 
 catalog:
+  '@antfu/eslint-config': ^10.0.0
+  '@nuxt/icon': ^2.6.2
+  '@nuxt/kit': ^4.6.4
+  '@nuxt/module-builder': ^1.0.3
+  '@nuxtjs/color-mode': ^3.5.2
   '@tailwindcss/vite': ^4.3.4
+  '@vue/shared': ^3.5.44
+  '@vueuse/core': ^13.9.0
+  defu: ^6.1.7
+  eslint: ^10.14.0
+  tailwind-merge: ^3.7.0
   tailwindcss: ^4.3.4
+  unbuild: ^3.6.1
   vue: ^3.5.44
   nuxt: ^4.6.4
   reka-ui: ^2.11.0
   typescript: ^5.9.3
+  vue-tsc: ^3.3.14
 
 ignoredBuiltDependencies:
   - '@parcel/watcher'
