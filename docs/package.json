@@ -54,7 +54,7 @@
     "@vueuse/components": "^15.0.0",
     "@vueuse/core": "catalog:",
     "@vueuse/nuxt": "^15.0.0",
-    "apexcharts": "5.3.3",
+    "apexcharts": "8.7.0",
     "better-sqlite3": "^13.0.3",
     "eslint": "^10.14.0",
     "minisearch": "^7.2.0",
@@ -69,7 +69,7 @@
     "unist-util-visit": "^5.2.0",
     "vue": "catalog:",
     "vue-component-meta": "^3.3.14",
-    "vue3-apexcharts": "1.8.0",
+    "vue3-apexcharts": "1.11.3",
     "vue3-smooth-dnd": "0.0.6"
   }
 }
