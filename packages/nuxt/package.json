@@ -50,7 +50,7 @@
     "@nuxtjs/color-mode": "^3.5.2",
     "@tailwindcss/vite": "catalog:",
     "@vue/shared": "^3.5.44",
-    "@vueuse/core": "^13.9.0",
+    "@vueuse/core": "catalog:",
     "defu": "^6.1.7",
     "reka-ui": "catalog:",
     "tailwind-merge": "^3.7.0",
