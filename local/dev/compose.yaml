@@ -1,0 +1,48 @@
+name: shuriken-ui-dev
+
+services:
+  shuriken-ui:
+    build:
+      context: ../..
+      dockerfile: local/dev/Dockerfile
+    command:
+      - sh
+      - -c
+      - pnpm install --frozen-lockfile && pnpm dev --host 0.0.0.0 --port 3000
+    environment:
+      NUXT_HOST: 0.0.0.0
+      NUXT_PORT: "3000"
+      NUXT_PUBLIC_API_BASE_URL: "${NUXT_PUBLIC_API_BASE_URL:-https://scac-backend.localhost}"
+    expose:
+      - "3000"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--spider", "http://127.0.0.1:3000/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 30s
+    labels:
+      caddy: "${SHURIKENUI_FRONTEND_HOST:-shuriken-ui.localhost}"
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+      caddy_ingress_network: "${PROXY_NETWORK:-local-proxy}"
+      traefik.enable: "true"
+      traefik.docker.network: "${PROXY_NETWORK:-local-proxy}"
+      traefik.http.routers.shuriken-ui.entrypoints: "${TRAEFIK_ENTRYPOINTS:-web}"
+      traefik.http.routers.shuriken-ui.rule: "Host(`${SHURIKENUI_FRONTEND_HOST:-shuriken-ui.localhost}`)"
+      traefik.http.routers.shuriken-ui.tls: "${TRAEFIK_TLS:-false}"
+      traefik.http.services.shuriken-ui.loadbalancer.server.port: "3000"
+    networks:
+      default: null
+      proxy:
+        aliases:
+          - shuriken-ui
+    restart: unless-stopped
+    volumes:
+      - ../..:/app
+
+networks:
+  default:
+    name: shuriken-ui-dev
+  proxy:
+    external: true
+    name: "${PROXY_NETWORK:-local-proxy}"
