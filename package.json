@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.8.0",
+  "packageManager": "pnpm@10.12.4",
   "scripts": {
     "dev": "pnpm --filter @shuriken-ui/docs dev",
     "dev:prepare": "pnpm --filter @shuriken-ui/nuxt dev:prepare"
