@@ -1,11 +1,12 @@
 {
-  "name": "@shuriken-ui/docs",
+  "name": "@joshuakaleb/docs",
   "type": "module",
   "version": "4.0.0",
+  "private": true,
   "author": "Css Ninja <hello@cssninja.io> (https://cssninja.io)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuriken-ui/shuriken-ui.git",
+    "url": "git+https://github.com/joshuakaleb0424/shuriken-ui.git",
     "directory": "docs"
   },
   "files": [
@@ -47,8 +48,8 @@
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.11.2",
     "@nuxtjs/mdc": "^0.17.4",
-    "@shuriken-ui/nuxt": "workspace:*",
-    "@shuriken-ui/nuxt-component-meta": "workspace:*",
+    "@joshuakaleb/nuxt": "workspace:*",
+    "@joshuakaleb/nuxt-component-meta": "workspace:*",
     "@tailwindcss/typography": "^0.5.20",
     "@vueuse/components": "^13.9.0",
     "@vueuse/core": "^13.9.0",

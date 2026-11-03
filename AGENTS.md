@@ -5,6 +5,7 @@
 - This is a private pnpm workspace/monorepo. The required package manager is pinned in the root `package.json` as `pnpm@10.12.4`.
 - Use the repository wrapper for every pnpm command: `./local/pnpm <command>`. It runs pnpm in the `shuriken-ui` Docker Compose service, so do not assume Node.js or pnpm are installed on the host.
 - The wrapper uses `local/dev/compose.yaml` and, when present, `local/dev/.env`.
+- npm authentication is supplied at runtime through `NPM_TOKEN`; set it in an untracked `local/dev/.env` file (use `local/dev/.env.example` as the template). The repository `.npmrc` reads that environment variable and contains no secret itself.
 - Run dependency commands from the repository root.
 
 ### Version ownership
@@ -45,12 +46,12 @@
 ### Validation after dependency changes
 
 ```sh
-./local/pnpm --filter @shuriken-ui/nuxt lint
-./local/pnpm --filter @shuriken-ui/nuxt test:types
-./local/pnpm --filter @shuriken-ui/nuxt build
+./local/pnpm --filter @joshuakaleb/nuxt lint
+./local/pnpm --filter @joshuakaleb/nuxt test:types
+./local/pnpm --filter @joshuakaleb/nuxt build
 
-./local/pnpm --filter @shuriken-ui/docs lint
-./local/pnpm --filter @shuriken-ui/docs build
+./local/pnpm --filter @joshuakaleb/docs lint
+./local/pnpm --filter @joshuakaleb/docs build
 
 ./local/pnpm --filter playground build
 ./local/pnpm --filter playground-tiny build

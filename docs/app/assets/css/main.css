@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import '@shuriken-ui/nuxt';
+@import '@joshuakaleb/nuxt';
 
 /* Parse markdown content */
 @source '../../../content/';

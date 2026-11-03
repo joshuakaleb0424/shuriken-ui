@@ -24,14 +24,14 @@ This repository contains Shuriken UI components (form inputs, buttons, cards, et
 Install dependencies:
 
 ```bash
-pnpm install -D @shuriken-ui/nuxt tailwindcss
+pnpm install -D @joshuakaleb/nuxt tailwindcss
 ```
 
 Add the Shuriken UI module to your `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
-  modules: ['@shuriken-ui/nuxt'],
+  modules: ['@joshuakaleb/nuxt'],
   css: ['~/assets/css/main.css'],
 })
 ```
@@ -40,7 +40,7 @@ Reference Shuriken UI in your `~/assets/css/main.css` file:
 
 ```css
 @import 'tailwindcss';
-@import '@shuriken-ui/nuxt';
+@import '@joshuakaleb/nuxt';
 ```
 
-> See the [theme.css](https://github.com/shuriken-ui/shuriken-ui/blob/main/packages/tailwind/lib/theme.css) file for a complete list of available variables you can customize.
+> See the [theme.css](https://github.com/joshuakaleb0424/shuriken-ui/blob/main/packages/nuxt/runtime/theme.css) file for a complete list of available variables you can customize.

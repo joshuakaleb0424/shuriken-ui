@@ -382,7 +382,7 @@ Don't forget to add the plugin to your main Tailwind CSS configuration file.
 ::code-group
 ```css [main.css]
 @import 'tailwindcss';
-@import '@shuriken-ui/nuxt';
+@import '@joshuakaleb/nuxt';
 @import '@tailwindcss/typography'; /* [!code ++] */
 ```
 ::

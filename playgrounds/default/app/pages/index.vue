@@ -1,5 +1,5 @@
 <template>
   <div class="flex items-center justify-center h-screen">
-    @shuriken-ui/nuxt playground!
+    @joshuakaleb/nuxt playground!
   </div>
 </template>

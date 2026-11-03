@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-18',
-  modules: ['@shuriken-ui/nuxt', 'nuxt-component-meta'],
+  modules: ['@joshuakaleb/nuxt', 'nuxt-component-meta'],
   typescript: {
     includeWorkspace: true,
   },

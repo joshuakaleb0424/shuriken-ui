@@ -11,9 +11,9 @@ WORKDIR /build
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
 FROM install AS build-docs
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm run --filter @shuriken-ui/nuxt dev:prepare
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm run --filter @shuriken-ui/nuxt-component-meta prepack
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store NODE_OPTIONS=--max-old-space-size=8192 pnpm run --filter @shuriken-ui/docs build
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm run --filter @joshuakaleb/nuxt dev:prepare
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm run --filter @joshuakaleb/nuxt-component-meta prepack
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store NODE_OPTIONS=--max-old-space-size=8192 pnpm run --filter @joshuakaleb/docs build
 
 FROM base AS docs
 ENV NODE_ENV=production

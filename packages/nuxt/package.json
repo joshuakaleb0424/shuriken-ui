@@ -1,13 +1,16 @@
 {
-  "name": "@shuriken-ui/nuxt",
+  "name": "@joshuakaleb/nuxt",
   "type": "module",
   "version": "4.0.0",
   "author": "Css Ninja <hello@cssninja.io> (https://cssninja.io)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuriken-ui/shuriken-ui.git",
+    "url": "git+https://github.com/joshuakaleb0424/shuriken-ui.git",
     "directory": "packages/nuxt"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "exports": {
     ".": {
