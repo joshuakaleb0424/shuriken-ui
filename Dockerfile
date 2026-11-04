@@ -1,5 +1,5 @@
 
-FROM bitnami/node:22.14.0 AS base
+FROM node:26.13.0-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
