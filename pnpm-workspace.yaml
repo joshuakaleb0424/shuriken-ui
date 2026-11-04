@@ -41,9 +41,9 @@ onlyBuiltDependencies:
 
 allowBuilds:
   '@parcel/watcher': false
-  '@tailwindcss/oxide': true
-  better-sqlite3: true
+  '@tailwindcss/oxide': false
+  better-sqlite3: false
   esbuild: false
-  sharp: true
-  unrs-resolver: true
+  sharp: false
+  unrs-resolver: false
   vue-demi: false
