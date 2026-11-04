@@ -38,3 +38,12 @@ onlyBuiltDependencies:
   - unrs-resolver
   - better-sqlite3
   - sharp
+
+allowBuilds:
+  '@parcel/watcher': false
+  '@tailwindcss/oxide': true
+  better-sqlite3: true
+  esbuild: false
+  sharp: true
+  unrs-resolver: true
+  vue-demi: false
