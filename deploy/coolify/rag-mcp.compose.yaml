@@ -34,18 +34,6 @@ services:
       - ollama-data:/root/.ollama
     restart: unless-stopped
 
-  ollama-init:
-    image: ${OLLAMA_IMAGE:?Set a tested, pinned Ollama image tag in Coolify.}
-    entrypoint: ["/bin/sh", "-c"]
-    environment:
-      OLLAMA_HOST: http://ollama:11434
-      RAG_EMBEDDING_MODEL: ${RAG_EMBEDDING_MODEL:-nomic-embed-text}
-    command: until ollama list >/dev/null 2>&1; do sleep 2; done; ollama pull "$$RAG_EMBEDDING_MODEL"
-    depends_on:
-      - ollama
-    restart: 'no'
-    exclude_from_hc: true
-
   indexer:
     build:
       context: .
@@ -58,8 +46,8 @@ services:
       RAG_PACKAGE_VERSION: ${RAG_PACKAGE_VERSION:-4.0.0}
       RAG_QDRANT_URL: http://qdrant:6333
     depends_on:
-      ollama-init:
-        condition: service_completed_successfully
+      ollama:
+        condition: service_started
       qdrant:
         condition: service_started
     restart: 'no'

@@ -22,3 +22,15 @@ export async function embed(config: RagConfig, inputs: string[]): Promise<number
 
   return data.embeddings
 }
+
+export async function pullModel(config: RagConfig): Promise<void> {
+  const response = await fetch(`${config.ollamaUrl}/api/pull`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ name: config.embeddingModel, stream: false }),
+  })
+
+  if (!response.ok) {
+    throw new Error(`Ollama model pull failed (${response.status}): ${await response.text()}`)
+  }
+}

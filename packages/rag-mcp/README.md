@@ -22,7 +22,7 @@ The MCP server is read-only. Each user's Codex client calls `search_shuriken_doc
    `MCP_AUTH_TOKEN` protects the public MCP endpoint. Keep Qdrant and Ollama private: only assign a public HTTPS domain to the `mcp` service, targeting port `3000`.
 
 4. Deploy the stack.
-5. Wait for `ollama-init` to download the embedding model and `indexer` to build the Qdrant collection. Both are one-time services and will show as completed. The `mcp` service starts only after the indexer succeeds.
+5. Wait for `indexer` to download the embedding model and build the Qdrant collection. It is a one-time service and will show as completed. The `mcp` service starts only after the indexer succeeds.
 
    On every deployment, the indexer refreshes documentation from `docs/content`, component source, and composable source embedded in the MCP image. It deliberately recreates the collection so deleted or changed documentation cannot remain searchable.
 

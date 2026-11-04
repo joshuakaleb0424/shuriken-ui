@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
 import { loadCorpus } from './corpus.js'
 import { ragConfig } from './config.js'
-import { embed } from './ollama.js'
+import { embed, pullModel } from './ollama.js'
 import { collectionExists, createCollection, deleteCollection, upsert } from './qdrant.js'
 
 const BATCH_SIZE = 32
@@ -27,6 +27,7 @@ await Promise.all([
   waitFor('Ollama', `${config.ollamaUrl}/api/tags`),
   waitFor('Qdrant', `${config.qdrantUrl}/collections`),
 ])
+await pullModel(config)
 const corpus = await loadCorpus(repositoryRoot, config.packageVersion)
 
 if (!corpus.length) throw new Error('No documentation or source files found to index')
