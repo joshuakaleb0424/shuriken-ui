@@ -7,9 +7,9 @@ COPY .npmrc pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY docs/package.json ./docs/package.json
 COPY packages ./packages
 COPY playgrounds ./playgrounds
-RUN npx --yes pnpm@10.12.4 install --frozen-lockfile
+RUN npx --yes pnpm@12.16.1 install --frozen-lockfile
 COPY docs/content ./docs/content
-RUN npx --yes pnpm@10.12.4 --filter @joshuakaleb/shuriken-ui-rag-mcp build
+RUN npx --yes pnpm@12.16.1 --filter @joshuakaleb/shuriken-ui-rag-mcp build
 
 FROM node:24-alpine
 WORKDIR /app
