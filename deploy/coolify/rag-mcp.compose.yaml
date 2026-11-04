@@ -1,7 +1,7 @@
 services:
   mcp:
     build:
-      context: ../..
+      context: .
       dockerfile: packages/rag-mcp/Dockerfile
     environment:
       MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:?Set a long random team access token in Coolify.}
