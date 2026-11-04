@@ -22,19 +22,9 @@ The MCP server is read-only. Each user's Codex client calls `search_shuriken_doc
    `MCP_AUTH_TOKEN` protects the public MCP endpoint. Keep Qdrant and Ollama private: only assign a public HTTPS domain to the `mcp` service, targeting port `3000`.
 
 4. Deploy the stack.
-5. In the `ollama` service terminal, download the embedding model:
+5. Wait for `ollama-init` to download the embedding model and `indexer` to build the Qdrant collection. Both are one-time services and will show as completed. The `mcp` service starts only after the indexer succeeds.
 
-   ```sh
-   ollama pull nomic-embed-text
-   ```
-
-6. In the `mcp` service terminal, build the initial Qdrant index:
-
-   ```sh
-   node dist/index-corpus.js /app --recreate
-   ```
-
-   The command indexes `docs/content`, component source, and composable source embedded in the MCP image. Re-run it after documentation or package API changes. `--recreate` deliberately replaces the full collection; omit it for incremental upserts.
+   On every deployment, the indexer refreshes documentation from `docs/content`, component source, and composable source embedded in the MCP image. It deliberately recreates the collection so deleted or changed documentation cannot remain searchable.
 
 Coolify manages the two named volumes declared in the Compose file. Back up `qdrant-data` and `ollama-data` before upgrades.
 

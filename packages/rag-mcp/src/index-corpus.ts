@@ -8,6 +8,25 @@ const BATCH_SIZE = 32
 const config = ragConfig()
 const repositoryRoot = resolve(process.argv[2] || process.cwd())
 const recreate = process.argv.includes('--recreate')
+
+async function waitFor(name: string, endpoint: string): Promise<void> {
+  for (let attempt = 1; attempt <= 60; attempt++) {
+    try {
+      const response = await fetch(endpoint)
+      if (response.ok) return
+    }
+    catch {
+      // The service is still starting.
+    }
+    await new Promise(resolve => setTimeout(resolve, 1_000))
+  }
+  throw new Error(`${name} did not become available within 60 seconds`)
+}
+
+await Promise.all([
+  waitFor('Ollama', `${config.ollamaUrl}/api/tags`),
+  waitFor('Qdrant', `${config.qdrantUrl}/collections`),
+])
 const corpus = await loadCorpus(repositoryRoot, config.packageVersion)
 
 if (!corpus.length) throw new Error('No documentation or source files found to index')
